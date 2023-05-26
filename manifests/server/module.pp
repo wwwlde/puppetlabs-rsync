@@ -59,7 +59,8 @@ define rsync::server::module (
   $transfer_logging   = undef,
   $log_format         = undef,
   $refuse_options     = undef,
-  $ignore_nonreadable = undef)  {
+  $ignore_nonreadable = undef,
+  $post_xfer_exec     = undef)  {
 
   concat::fragment { "frag-${name}":
     content => template('rsync/module.erb'),

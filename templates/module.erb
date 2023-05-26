@@ -48,3 +48,6 @@ refuse options     = <%= Array(@refuse_options).join(' ')%>
 <% if @ignore_nonreadable -%>
 ignore nonreadable = <%= @ignore_nonreadable %>
 <% end -%>
+<% if @post_xfer_exec -%>
+post-xfer exec     = <%= @post_xfer_exec %>
+<% end -%>
